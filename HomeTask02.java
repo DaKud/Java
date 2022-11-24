@@ -2,7 +2,7 @@
 // и определяет является ли строка палиндромом (возвращает boolean значение).
 public class HomeTask02 {
     
-private static boolean isPolindrom(String targetStr){
+private static boolean isPalindrom(String targetStr){
     if (targetStr.length() == 1)
         return true;
     for (int i = 0; i < targetStr.length()/2; i++) {
@@ -15,7 +15,7 @@ private static boolean isPolindrom(String targetStr){
 public static void main(String[] args) {
     String [] arrStr = {"uwu", "rru" };
     for (String s: arrStr)
-        if (isPolindrom(s))
+        if (isPalindrom(s))
             System.out.printf("%s - true \n", s);
         else
         System.out.printf("%s - false \n", s);
