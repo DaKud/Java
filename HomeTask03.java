@@ -22,34 +22,56 @@ import java.util.Collections;
 //          System.out.println(number);
 //     }
 // }
+
+
+
 // 2. Задан целочисленный список ArrayList. Найти минимальное, максимальное и среднее из этого списка.
-public class HomeTask03 {
-    public static void main(String[] args){
-        ArrayList<Integer> list = new ArrayList<>();
-        list.add(12);
-        list.add(21);
-        list.add(111);
+// public class HomeTask03 {
+//     public static void main(String[] args){
+//         ArrayList<Integer> list = new ArrayList<>();
+//         list.add(4);
+//         list.add(3);
+//         list.add(6);
         
-        System.out.println(Collections.max(list));
-        System.out.println(Collections.min(list));
+//         System.out.println("Max value is " + Collections.max(list));
+//         System.out.println("Min value is " + Collections.min(list));
+//         System.out.println("Average value is " + average(list));
+//     }
+//     static double average (ArrayList<Integer> list) {
         
-    }
-}
-// ArrayList<Integer> list = new ArrayList<Integer>();
-// list.add(100);
-// list.add(-666);
-// list.add(666);
+//         double sum = 0;
+        
+//         for(int i=0;i<list.size();i++) {
+//             sum+=list.get(i);
+//         }
+        
+//         return sum/list.size();
+//     }
 
-// int min = list.get(0);
-// int max = list.get(0);
-
-// for (Integer i: list) {
-//     if(i < min) 
-//         min = i;
-//     if(i > max) 
-//         max = i;
-//      
 // }
 
-// System.out.println("минимальное число: " + min);
-// System.out.println("максимальное число: " + max);
+
+// 3.Написать простой класс ТелефонныйСправочник, 
+//который хранит в себе список фамилий и телефонных номеров.
+// В этот телефонный справочник с помощью метода add() 
+//можно добавлять записи. С помощью метода get() искать 
+//номер телефона по фамилии. Следует учесть, что под одной 
+//фамилией может быть несколько телефонов 
+//(в случае однофамильцев), тогда при запросе такой фамилии 
+//должны выводиться все телефоны.
+
+import java.util.Arrays;
+
+public class HomeTask03 {
+    public static void main(String[] args) {
+    PhoneBook phoneBook = new PhoneBook();
+        phoneBook.add("John", "33344");
+        phoneBook.add("Peter", "344");
+        phoneBook.add("Philipp", "344");
+        phoneBook.add("Philipp", "122");
+            
+        List<String> strings = phoneBook.get("Philipp");
+        System.out.println(strings);
+
+    }
+}
