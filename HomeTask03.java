@@ -60,18 +60,21 @@ import java.util.Collections;
 //(в случае однофамильцев), тогда при запросе такой фамилии 
 //должны выводиться все телефоны.
 
-import java.util.Arrays;
+import java.util.*;
 
 public class HomeTask03 {
     public static void main(String[] args) {
-    PhoneBook phoneBook = new PhoneBook();
-        phoneBook.add("John", "33344");
-        phoneBook.add("Peter", "344");
-        phoneBook.add("Philipp", "344");
-        phoneBook.add("Philipp", "122");
-            
-        List<String> strings = phoneBook.get("Philipp");
-        System.out.println(strings);
+    
+    Phonebook phonebook = new Phonebook();
+
+    phonebook.add("John", "33344");
+    phonebook.add("Peter", "344");
+    phonebook.add("Philipp", "344");
+    phonebook.add("Philipp", "122");
+    
+    List<String> strings = phonebook.get("Philipp");
+    System.out.println(strings);
 
     }
-}
+}  
+ 
